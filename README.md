@@ -7,6 +7,8 @@ This library will eventually support longs, long longs, signed vs unsigned, etc.
 
 Note: Char Matrix is a matrix where each cell is a character, String Matrix is a matrix where each cell is a string (char*).
 	Thus, when making a String Matrix you must provide a char***, where as with a Char Matrix you only need a char**.
+	
+All Matrix operations should qualify as vector implementations, when implemented, as well. Simply create a 1 dimensional matrix.
 
 Compilation
 ===========

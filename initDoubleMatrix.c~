@@ -1,8 +1,8 @@
 #include "matrix.h"
 
-Matrix* initFloatMatrix(int rows, int columns, float** elements)
+Matrix* initDoubleMatrix(int rows, int columns, double** elements)
 {
-	size_t elemSize = sizeof(float);
+	size_t elemSize = sizeof(double);
 	if(rows == 0 || columns == 0 || elemSize == 0)
 	{
 		perror("Incorrect Parameters To initMatrix!");
@@ -31,24 +31,24 @@ Matrix* initFloatMatrix(int rows, int columns, float** elements)
 	for(x = 0; x < rows; x++)
 	{
 	
-		matrix->floats[x] = malloc(sizeof(elemSize)*columns);
-		if(!matrix->floats[x])
+		matrix->doubles[x] = malloc(sizeof(elemSize)*columns);
+		if(!matrix->doubles[x])
 		{
 			perror("Matrix Malloc Rows");
-			for(x=x; x > 0; x--)
-				free(matrix->floats[x]);
+			for(x; x > 0; x--)
+				free(matrix->doubles[x]);
 			free(matrix);
 			return NULL;
 		}
 		
 		if(!empty_matrix_flag)
 		{
-			memcpy(matrix->floats[x], elements[x], elemSize*columns);
+			memcpy(matrix->doubles[x], elements[x], elemSize*columns);
 		}
 		
 		else
 		{
-			memset(matrix->floats[x], 0, elemSize*columns);
+			memset(matrix->doubles[x], 0, elemSize*columns);
 		}
 		
 	}

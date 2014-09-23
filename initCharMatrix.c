@@ -35,7 +35,7 @@ Matrix* initCharMatrix(int rows, int columns, char** elements)
 		if(!matrix->chars[x])
 		{
 			perror("Matrix Malloc Rows");
-			for(x; x > 0; x--)
+			for(x=x; x > 0; x--)
 				free(matrix->chars[x]);
 			free(matrix);
 			return NULL;

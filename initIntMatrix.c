@@ -43,7 +43,7 @@ Matrix* initIntMatrix(int rows, int columns, int** elements)
 		if(!matrix->ints[x])
 		{
 			perror("Matrix Malloc Rows");
-			for(x; x > 0; x--)
+			for(x=x; x > 0; x--)
 				free(matrix->ints[x]);
 			free(matrix);
 			return NULL;

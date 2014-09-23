@@ -35,7 +35,7 @@ Matrix* initFloatMatrix(int rows, int columns, float** elements)
 		if(!matrix->floats[x])
 		{
 			perror("Matrix Malloc Rows");
-			for(x=x; x > 0; x--)
+			for(x; x > 0; x--)
 				free(matrix->floats[x]);
 			free(matrix);
 			return NULL;

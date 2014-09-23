@@ -23,7 +23,7 @@ library: $(SOURCES) $(HEADERS)
 test: $(EXECUTABLE) $(SOURCES) $(HEADERS) main.c
 	
 $(EXECUTABLE): $(OBJECTS)
-	$(CC) $(FLAGS) $(HEADERS) main.c -o $@ ${LIBNAME}
+	$(CC) $(FLAGS) $(HEADERS) main.c -o $@ libmatrix.a
 
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $@

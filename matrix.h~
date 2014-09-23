@@ -43,4 +43,3 @@ void freeIntMatrix(Matrix* matrix);
 void freeStringMatrix(Matrix* matrix);
 int testIntMatrix();
 int testStringMatrix();
-

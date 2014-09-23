@@ -35,7 +35,7 @@ Matrix* initDoubleMatrix(int rows, int columns, double** elements)
 		if(!matrix->doubles[x])
 		{
 			perror("Matrix Malloc Rows");
-			for(x; x > 0; x--)
+			for(x=x; x > 0; x--)
 				free(matrix->doubles[x]);
 			free(matrix);
 			return NULL;

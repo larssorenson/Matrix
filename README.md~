@@ -20,9 +20,6 @@ Compilation
 	make all
 		- Same as make test
 	
-	make clean
-		- Removes all .o files, the test file, and any ~ files.
-	
 Usage
 =====
 	#include "matrix.h"

@@ -29,6 +29,9 @@ Usage
 	
 	and in whatever compilation, just include libmatrix.a as an object file.
 	
+	Note: Behaviour is undefined for irregularly sized matrices. Meaning, if you declare
+		3 columns and 4 rows, you must supply 12 elements or the matrix may be malformed.
+	
 	Int Matrix Functions:
 		- initIntMatrix(int rows, int columns, int** elements)
 		- printIntMatrix(Matrix*)
